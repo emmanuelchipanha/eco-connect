@@ -97,7 +97,7 @@ export default function App(){
     }
 
     const errors = [g, m, tx, l, a, ap, sms, ba, bt, ma]
-      .filter(result => result.error);
+  .filter(result => result != null && result.error);
 
     if (errors.length) {
       setMsg('Data error: ' + errors[0].error.message);
