@@ -100,7 +100,7 @@ export default function App(){
   .filter(result => result != null && result.error);
 
     if (errors.length) {
-      setMsg('Data error: ' + errors[0].error.message);
+      setMsg('Data error: ' + String(errors[0].error));
     }
 
     setGroups(g.data || []);
