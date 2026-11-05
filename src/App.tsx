@@ -91,7 +91,7 @@ export default function App(){
     } else {
       setProfile(p.data as Profile);
 
-      if (!p.data.is_active) {
+      if (p.data && !p.data.is_active) {
         setMsg(t('Akaunti hii imesitishwa.', 'This account is inactive.'));
       }
     }
